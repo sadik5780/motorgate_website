@@ -62,7 +62,7 @@ export default function Header() {
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
                             <img src="/icons/LocationInformation.png" alt="Address" className="w-4 h-4 " />
-                            <span>123 MotorGate Street, Dubai, UAE</span>
+                            <span>123 MotorGate Street, Saudi Arabia</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <img src="/icons/mobile-phone.png" alt="Call" className="w-4 h-4 " />

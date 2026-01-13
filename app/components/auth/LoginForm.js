@@ -9,7 +9,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     const [error, setError] = useState('');
 
     // Default to UAE or fallback to first
-    const defaultCountry = countries.find(c => c.code === 'ae') || countries[0];
+    const defaultCountry = countries.find(c => c.code === 'sa') || countries[0];
     const [selectedCountry, setSelectedCountry] = useState(defaultCountry);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
