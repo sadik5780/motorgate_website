@@ -11,7 +11,7 @@ const SuccessStep = ({ onContinue }) => {
         }, 1000);
 
         const redirect = setTimeout(() => {
-            window.location.href = 'http://localhost:5173/';
+            window.location.href = 'https://motorgate-dashborad.vercel.app/';
         }, 5000);
 
         return () => {
