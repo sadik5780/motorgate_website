@@ -100,7 +100,7 @@ export default function Home() {
                 <div className="absolute inset-0 z-40">
 
                   {/* Maintenance - Big */}
-                  <Link href="/maintenance" className="absolute top-[-10%] left-[68%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[-10%] left-[68%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/maintenance.png" alt="Maintenance" className="w-10 h-10" />
                     </div>
@@ -110,7 +110,7 @@ export default function Home() {
                   </Link>
 
                   {/* Spare Parts - Big */}
-                  <Link href="/spare-parts" className="absolute top-[-5%] left-[40%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[-5%] left-[40%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/sparepart.png" alt="Spare Parts" className="w-10 h-10" />
                     </div>
@@ -120,7 +120,7 @@ export default function Home() {
                   </Link>
 
                   {/* Marketplace - Big */}
-                  <Link href="/marketplace" className="absolute bottom-[45%] left-[20%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute bottom-[45%] left-[20%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/market.png" alt="Marketplace" className="w-12 h-12" />
                     </div>
@@ -130,7 +130,7 @@ export default function Home() {
                   </Link>
 
                   {/* Towing - Big */}
-                  <Link href="/towing" className="absolute top-[25%] left-[58%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[25%] left-[58%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/tow.png" alt="Towing" className="w-12 h-12" />
                     </div>
@@ -140,7 +140,7 @@ export default function Home() {
                   </Link>
 
                   {/* Rental - Small */}
-                  <Link href="/rental" className="absolute top-[32%] left-[42%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[32%] left-[42%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-slow delay-400 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/renta.png" alt="Rental" className="w-7 h-7" />
                     </div>
@@ -150,7 +150,7 @@ export default function Home() {
                   </Link>
 
                   {/* Insurance - Small */}
-                  <Link href="/insurance" className="absolute top-[20%] left-[30%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[20%] left-[30%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-medium delay-500 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/insu.png" alt="Insurance" className="w-6 h-6" />
                     </div>
@@ -160,7 +160,7 @@ export default function Home() {
                   </Link>
 
                   {/* Auction - Small */}
-                  <Link href="/auction" className="absolute top-[5%] left-[58%] group cursor-pointer inline-block">
+                  <Link href="#" className="absolute top-[5%] left-[58%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-slow delay-600 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/auct.png" alt="Auction" className="w-6 h-6" />
                     </div>

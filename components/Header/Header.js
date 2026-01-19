@@ -58,15 +58,15 @@ export default function Header() {
         <>
             {/* TOP BAR */}
             <div className="bg-white border-b border-gray-100 hidden md:block">
-                <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm text-gray-500">
+                {/* <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm text-gray-500">
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
                             <img src="/icons/LocationInformation.png" alt="Address" className="w-4 h-4 " />
-                            <span>123 MotorGate Street, Saudi Arabia</span>
+                            <span>Motor Gate, Jeddah 23617, Saudi Arabia</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <img src="/icons/mobile-phone.png" alt="Call" className="w-4 h-4 " />
-                            <span>+971 50 123 4567</span>
+                            <span>+966 54 554 4174</span>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function Header() {
                             <span>support@motorgate.com</span>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
@@ -121,6 +121,12 @@ export default function Header() {
                         >
                             Join us
                         </button>
+                        <Link
+                            href={pathname.startsWith('/services/') && pathname.split('/').length > 2 ? "#contact-us" : "/services/maintenance#contact-us"}
+                            className="hidden md:flex h-10 px-5 rounded-full border border-[#409EFF] text-[#409EFF] text-sm font-semibold flex items-center justify-center leading-none cursor-pointer hover:bg-blue-50 transition-colors"
+                        >
+                            Contact Us
+                        </Link>
                         {/* Hamburger */}
                         <button
                             className="lg:hidden text-2xl text-[#303133] cursor-pointer"
