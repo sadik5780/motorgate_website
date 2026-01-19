@@ -21,7 +21,7 @@ const SuccessStep = ({ onContinue }) => {
     }, []);
 
     const handleManualRedirect = () => {
-        window.location.href = 'http://localhost:5173/';
+        window.location.href = 'https://motorgate-dashborad.vercel.app/';
     };
 
     return (
