@@ -80,7 +80,7 @@ export default function ServicesPage() {
                                     <Link href={`/services/${slug}`} key={index} className="contents">
                                         <div className="bg-white rounded-[32px] p-6 h-[300px] flex flex-col relative overflow-hidden group transition-shadow" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
                                             <div className="flex justify-between items-start mb-4">
-                                                <div className="w-[60px] h-[60px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.2)' }}>
+                                                <div className="w-[50px] h-[50px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.2)' }}>
                                                     <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain" />
                                                 </div>
                                                 <div className="w-[300px] h-[120px] relative -mr-4 -mt-2">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
                                     <Link href={`/services/${slug}`} key={index} className="contents">
                                         <div className="bg-white rounded-[32px] p-6 h-[270px] flex flex-col relative overflow-hidden group transition-shadow w-full md:w-[calc((100%_-_24px)/2)] lg:w-[calc((100%_-_48px)/2.5)]" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
                                             <div className="flex justify-start items-start mb-4">
-                                                <div className="w-[60px] h-[60px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
+                                                <div className="w-[50px] h-[50px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
                                                     <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain " />
                                                 </div>
                                                 <div className="w-[300px] h-[110px] relative ml-10">
@@ -134,7 +134,7 @@ export default function ServicesPage() {
                                     <Link href={`/services/${slug}`} key={index} className="contents">
                                         <div className="bg-white rounded-[32px] p-6 h-[250px] flex flex-col relative overflow-hidden group transition-shadow w-full md:w-[calc((100%_-_24px)/2)] lg:w-[calc((100%_-_48px)/2)]" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
                                             <div className="flex justify-between items-center">
-                                                <div className="w-[60px] h-[60px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
+                                                <div className="w-[50px] h-[50px] bg-[#2388FF] rounded-[18px] flex items-center justify-center" style={{ boxShadow: '3px 13px 13px 3px rgba(45, 83, 219, 0.1)' }}>
                                                     <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain " />
                                                 </div>
                                                 <div className="w-[220px] h-[120px] relative mr-10">
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                     <div className="max-w-[1400px] mx-auto px-6">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-2">
                             <p className="text-[16px]m text-gray-600">
-                                © 2025 MotorGate. All Rights Reserved.
+                                © 2026 MotorGate. All Rights Reserved.
                             </p>
                             <div className="flex items-center gap-4">
                                 <span className="text-[16px]m text-gray-600">Follow us</span>

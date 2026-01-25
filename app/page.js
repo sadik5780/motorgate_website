@@ -39,12 +39,12 @@ export default function Home() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-3 pt-1">
-                  <button className="px-6 py-2.5 rounded-full bg-[#1D1D1F] text-white text-[14px] font-medium hover:bg-[#2D2D2F] transition-colors">
+                  <button className="px-6 py-2.5 rounded-full bg-[#1D1D1F] text-white text-[14px] font-medium hover:bg-[#2D2D2F] transition-colors cursor-pointer">
                     Explore Services
                   </button>
                   <button
                     onClick={() => setIsLoginOpen(true)}
-                    className="px-7 py-3 rounded-full bg-[#409EFF] text-white text-[15px] font-medium hover:bg-[#3A8EEF] transition-colors"
+                    className="px-7 py-3 rounded-full bg-[#409EFF] text-white text-[15px] font-medium hover:bg-[#3A8EEF] transition-colors cursor-pointer"
                   >
                     Get Started Now
                   </button>
@@ -100,7 +100,7 @@ export default function Home() {
                 <div className="absolute inset-0 z-40">
 
                   {/* Maintenance - Big */}
-                  <Link href="#" className="absolute top-[-10%] left-[68%] group cursor-pointer inline-block">
+                  <Link href="/maintenance" className="absolute top-[-10%] left-[68%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/maintenance.png" alt="Maintenance" className="w-10 h-10" />
                     </div>
@@ -110,7 +110,7 @@ export default function Home() {
                   </Link>
 
                   {/* Spare Parts - Big */}
-                  <Link href="#" className="absolute top-[-5%] left-[40%] group cursor-pointer inline-block">
+                  <Link href="/spare-parts" className="absolute top-[-5%] left-[40%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/sparepart.png" alt="Spare Parts" className="w-10 h-10" />
                     </div>
@@ -120,7 +120,7 @@ export default function Home() {
                   </Link>
 
                   {/* Marketplace - Big */}
-                  <Link href="#" className="absolute bottom-[45%] left-[20%] group cursor-pointer inline-block">
+                  <Link href="/marketplace" className="absolute bottom-[45%] left-[20%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/market.png" alt="Marketplace" className="w-12 h-12" />
                     </div>
@@ -130,7 +130,7 @@ export default function Home() {
                   </Link>
 
                   {/* Towing - Big */}
-                  <Link href="#" className="absolute top-[25%] left-[58%] group cursor-pointer inline-block">
+                  <Link href="/towing" className="absolute top-[25%] left-[58%] group cursor-pointer inline-block">
                     <div className="w-[85px] h-[85px] rounded-full flex items-center justify-center animate-scale-pulse hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/tow.png" alt="Towing" className="w-12 h-12" />
                     </div>
@@ -140,7 +140,7 @@ export default function Home() {
                   </Link>
 
                   {/* Rental - Small */}
-                  <Link href="#" className="absolute top-[32%] left-[42%] group cursor-pointer inline-block">
+                  <Link href="/rental" className="absolute top-[32%] left-[42%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-slow delay-400 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/renta.png" alt="Rental" className="w-7 h-7" />
                     </div>
@@ -150,7 +150,7 @@ export default function Home() {
                   </Link>
 
                   {/* Insurance - Small */}
-                  <Link href="#" className="absolute top-[20%] left-[30%] group cursor-pointer inline-block">
+                  <Link href="/insurance" className="absolute top-[20%] left-[30%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-medium delay-500 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/insu.png" alt="Insurance" className="w-6 h-6" />
                     </div>
@@ -160,7 +160,7 @@ export default function Home() {
                   </Link>
 
                   {/* Auction - Small */}
-                  <Link href="#" className="absolute top-[5%] left-[58%] group cursor-pointer inline-block">
+                  <Link href="/auction" className="absolute top-[5%] left-[58%] group cursor-pointer inline-block">
                     <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center animate-float-slow delay-600 hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #2388FF 0%, #E9F3FF 100%)', boxShadow: 'rgb(255 255 255 / 45%) 0px 0px 0px 6px' }}>
                       <img src="/icons/hero_icons/auct.png" alt="Auction" className="w-6 h-6" />
                     </div>
@@ -195,11 +195,11 @@ export default function Home() {
       </section>
 
       {/* Footer - Fixed at Bottom */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white text-black py-3 z-50 border-t border-gray-200">
+      <div className="fixed bottom-0 left-0 right-0 bg-white text-black py-3 z-20 border-t border-gray-200">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <p className="text-[16px]m text-gray-600">
-              © 2025 MotorGate. All Rights Reserved.
+              © 2026 MotorGate. All Rights Reserved.
             </p>
             <div className="flex items-center gap-4">
               <span className="text-[16px]m text-gray-600">Follow us</span>
@@ -246,7 +246,7 @@ export default function Home() {
               </div>
               <button
                 onClick={() => setIsAiOpen(false)}
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors cursor-pointer"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -276,7 +276,7 @@ export default function Home() {
                   placeholder="Ask a question..."
                   className="w-full pl-4 pr-10 py-3 rounded-xl border border-gray-200 focus:border-[#2388FF] focus:ring-2 focus:ring-[#2388FF]/10 outline-none text-sm bg-white"
                 />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-[#2388FF] hover:bg-[#1a7ae6] rounded-lg transition-colors group">
+                <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-[#2388FF] hover:bg-[#1a7ae6] rounded-lg transition-colors group cursor-pointer">
                   <svg className="w-4 h-4 text-white transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>

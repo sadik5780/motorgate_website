@@ -10,28 +10,24 @@ export default function Header() {
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     const pathname = usePathname();
     const menuRef = useRef(null);
+    const [currentHash, setCurrentHash] = useState('');
 
-    const [activeSection, setActiveSection] = useState('');
-
+    // Track hash changes
     useEffect(() => {
-        setActiveSection('');
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        const sections = document.querySelectorAll('section[id]');
-        sections.forEach((section) => observer.observe(section));
-
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
+        const handleHashChange = () => {
+            setCurrentHash(window.location.hash);
         };
+
+        // Set initial hash
+        setCurrentHash(window.location.hash);
+
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
+
+    // Update hash when pathname changes
+    useEffect(() => {
+        setCurrentHash(window.location.hash);
     }, [pathname]);
 
     // Close menu when switching to desktop
@@ -56,27 +52,6 @@ export default function Header() {
 
     return (
         <>
-            {/* TOP BAR */}
-            <div className="bg-white border-b border-gray-100 hidden md:block">
-                {/* <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center gap-6">
-                        <div className="flex items-center gap-2">
-                            <img src="/icons/LocationInformation.png" alt="Address" className="w-4 h-4 " />
-                            <span>Motor Gate, Jeddah 23617, Saudi Arabia</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <img src="/icons/mobile-phone.png" alt="Call" className="w-4 h-4 " />
-                            <span>+966 54 554 4174</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
-                            <img src="/icons/message.png" alt="Email" className="w-4 h-4 " />
-                            <span>support@motorgate.com</span>
-                        </div>
-                    </div>
-                </div> */}
-            </div>
 
             <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
@@ -90,20 +65,23 @@ export default function Header() {
 
                     {/* DESKTOP NAV */}
                     <nav className="hidden lg:flex items-center gap-8 text-[14px] ">
-                        <Link href="/" className={`cursor-pointer ${pathname === '/' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Home</Link>
-                        <Link href="/services" className={`cursor-pointer ${pathname.startsWith('/services') ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Services</Link>
+                        <Link href="/" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname === '/' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Home</Link>
+                        <Link href="/services" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname.startsWith('/services') && !currentHash ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Services</Link>
                         <Link
                             href={pathname.startsWith('/services/') && pathname.split('/').length > 2 ? "#how-it-works" : "/services/maintenance#how-it-works"}
-                            className={`cursor-pointer ${activeSection === 'how-it-works' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}
+                            onClick={() => setCurrentHash('#how-it-works')}
+                            className={`cursor-pointer ${currentHash === '#how-it-works' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}
                         >
                             How It Works
                         </Link>
                         <Link
                             href={pathname.startsWith('/services/') && pathname.split('/').length > 2 ? "#reviews" : "/services/maintenance#reviews"}
-                            className={`cursor-pointer ${activeSection === 'reviews' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}
+                            onClick={() => setCurrentHash('#reviews')}
+                            className={`cursor-pointer ${currentHash === '#reviews' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}
                         >
                             Reviews
                         </Link>
+                        <Link href="/contact" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname === '/contact' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Contact Us</Link>
                         <span className="cursor-pointer text-[#909399] hover:text-[#409EFF]">For Providers</span>
                     </nav>
 
@@ -121,12 +99,6 @@ export default function Header() {
                         >
                             Join us
                         </button>
-                        <Link
-                            href={pathname.startsWith('/services/') && pathname.split('/').length > 2 ? "#contact-us" : "/services/maintenance#contact-us"}
-                            className="hidden md:flex h-10 px-5 rounded-full border border-[#409EFF] text-[#409EFF] text-sm font-semibold flex items-center justify-center leading-none cursor-pointer hover:bg-blue-50 transition-colors"
-                        >
-                            Contact Us
-                        </Link>
                         {/* Hamburger */}
                         <button
                             className="lg:hidden text-2xl text-[#303133] cursor-pointer"
@@ -156,6 +128,7 @@ export default function Header() {
                             <Link href="/services" className={`cursor-pointer text-sm font-medium ${pathname.startsWith('/services') ? 'text-[#409EFF]' : 'text-[#909399] hover:text-[#409EFF]'}`}>Services</Link>
                             <span className="cursor-pointer text-sm font-medium text-[#909399] hover:text-[#409EFF]">How It Works</span>
                             <span className="cursor-pointer text-sm font-medium text-[#909399] hover:text-[#409EFF]">Reviews</span>
+                            <Link href="/contact" className={`cursor-pointer text-sm font-medium ${pathname === '/contact' ? 'text-[#409EFF]' : 'text-[#909399] hover:text-[#409EFF]'}`}>Contact Us</Link>
                             <span className="cursor-pointer text-sm font-medium text-[#909399] hover:text-[#409EFF]">For Providers</span>
                             <button
                                 onClick={() => setIsLoginOpen(true)}

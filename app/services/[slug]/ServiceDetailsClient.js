@@ -20,7 +20,7 @@ export default function ServiceDetailsClient({ slug }) {
             image: "/img/main_img.png",
             step: "/img/1.png",
             heroImage: "/img/main_img.png",
-            description: "Vehicle servicing and repairs are provided by verified and trusted workshops. Easily book the required service by selecting a convenient date and time slot. Track the entire service process in real time and receive timely notifications. Review the completed work and make payment only after the service is finished.",
+            description: "Easily book the required service by selecting a convenient date and time slot. Track the entire service process in real time and receive timely notifications.",
             categories: ["Oil Change", "AC Service", "Wheel Service", "Battery Check", "Engine Diagnostics", "Brake Service", "Car Wash", "Detailing"],
             // Specific alignment for Maintenance
             containerClass: "lg:col-span-12 relative h-[350px] w-full flex items-start justify-start lg:justify-start",
@@ -31,7 +31,7 @@ export default function ServiceDetailsClient({ slug }) {
             image: "/img/Marketplace.png",
             step: "/img/2.png",
             heroImage: "/img/Marketplace.png",
-            description: "Buy and sell cars with confidence. Browse verified listings, compare prices, and connect with sellers directly. Secure transaction processes ensure peace of mind for both buyers and sellers.",
+            description: "Buy and sell cars with confidence. Browse verified listings, compare prices, and connect with sellers directly.",
             categories: ["Used Cars", "New Cars", "Certified Pre-Owned", "Sell My Car", "Car Valuation", "Vehicle History"],
             containerClass: "lg:col-span-8 relative h-[400px] flex items-center justify-center lg:justify-start",
             imageClass: "h-full w-auto object-contain drop-shadow-2xl relative z-10 scale-105"
@@ -99,7 +99,7 @@ export default function ServiceDetailsClient({ slug }) {
                 {/* Header is global */}
 
                 {/* Hero Section */}
-                <section className="relative pt-8 pb-16 overflow-visible" style={{ backgroundImage: 'url(/img/service_details_bg.png)', backgroundSize: '70% auto', backgroundPosition: 'right top', backgroundRepeat: 'no-repeat' }}>
+                <section className="relative pt-8 pb-8 overflow-visible" style={{ backgroundImage: 'url(/img/service_details_bg.png)', backgroundSize: '70% auto', backgroundPosition: 'right top', backgroundRepeat: 'no-repeat' }}>
 
                     <div className="max-w-[1400px] mx-auto px-6 relative z-10">
                         {/* Breadcrumb */}
@@ -109,9 +109,9 @@ export default function ServiceDetailsClient({ slug }) {
                             <span className="text-gray-900 font-medium">{currentService.title}</span>
                         </nav>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start -mb-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start -mb-10">
                             {/* Text Content */}
-                            <div className="lg:col-span-5 mt-2 relative z-20">
+                            <div className="lg:col-span-7 mt-2 relative z-20">
                                 <h1 className="text-[44px] text-[#1a1a1a] leading-tight">
                                     {currentService.title}
                                 </h1>
@@ -142,11 +142,11 @@ export default function ServiceDetailsClient({ slug }) {
                         <h2 className="text-[24px] font-bold text-[#1a1a1a] mb-6">Categories</h2>
                         <div className="flex flex-wrap gap-3">
                             {currentService.categories.map((cat, idx) => (
-                                <button key={idx} className="px-6 py-2.5 rounded-full border border-gray-200 text-gray-600 text-sm hover:border-blue-500 hover:text-blue-600 transition-colors bg-white">
+                                <button key={idx} className="px-6 py-2.5 rounded-full border border-gray-200 text-gray-600 text-sm hover:border-blue-500 hover:text-blue-600 transition-colors bg-white cursor-pointer">
                                     {cat}
                                 </button>
                             ))}
-                            <button className="px-6 py-2.5 rounded-full bg-[#2388FF] text-white text-sm font-medium shadow-lg shadow-blue-500/30">
+                            <button className="px-6 py-2.5 rounded-full bg-[#2388FF] text-white text-sm font-medium shadow-lg shadow-blue-500/30 cursor-pointer">
                                 More Services...
                             </button>
                         </div>
@@ -168,7 +168,7 @@ export default function ServiceDetailsClient({ slug }) {
                                             <button
                                                 key={slug}
                                                 onClick={() => setActiveTab(slug)}
-                                                className={`px-4 py-3 rounded-lg text-[16px] transition-all duration-200 flex items-center justify-between group text-left w-full ${isActive
+                                                className={`px-4 py-3 rounded-lg text-[16px] transition-all duration-200 flex items-center justify-between group text-left w-full cursor-pointer ${isActive
                                                     ? "bg-[#2388FF] text-white shadow-md shadow-blue-500/20"
                                                     : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                                     }`}
@@ -242,22 +242,22 @@ export default function ServiceDetailsClient({ slug }) {
 
                                     {/* Links */}
                                     <div className="flex items-center justify-between mb-6 text-sm">
-                                        <button className="flex items-center gap-2 text-[#2388FF] font-medium hover:text-blue-700 transition-colors">
+                                        <button className="flex items-center gap-2 text-[#2388FF] font-medium hover:text-blue-700 transition-colors cursor-pointer">
                                             <div className="">
                                                 <img className="w-5 h-5" src="/icons/nearby.png" alt="" />
                                             </div>
                                             Nearby workshops
                                         </button>
-                                        <button className="underline decoration-[#000] hover:text-gray-700 text-xs">Choose Services</button>
+                                        <button className="underline decoration-[#000] hover:text-gray-700 text-xs cursor-pointer">Choose Services</button>
                                     </div>
 
                                     {/* Filter Buttons */}
                                     <div className="flex gap-3">
-                                        <button className="flex-1 py-2.5 px-1 rounded-[20px] border border-blue-400 text-[#2388FF] text-[14px] font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors">
+                                        <button className="flex-1 py-2.5 px-1 rounded-[20px] border border-blue-400 text-[#2388FF] text-[14px] font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors cursor-pointer">
                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" /></svg>
                                             Sort by
                                         </button>
-                                        <button className="flex-1 py-2.5 px-1 rounded-[20px] border border-blue-400 text-[#2388FF] text-[14px] font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors">
+                                        <button className="flex-1 py-2.5 px-1 rounded-[20px] border border-blue-400 text-[#2388FF] text-[14px] font-medium flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors cursor-pointer">
                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
                                             Filter
                                         </button>
@@ -321,13 +321,13 @@ export default function ServiceDetailsClient({ slug }) {
                             <div className="bg-white rounded-full p-2 flex shadow-sm border border-gray-100">
                                 <button
                                     onClick={() => setActiveReviewTab('users')}
-                                    className={`px-6 py-2 rounded-full text-sm transition-all ${activeReviewTab === 'users' ? 'bg-[#2388FF] text-white' : 'text-gray-500 hover:bg-gray-50'}`}
+                                    className={`px-6 py-2 rounded-full text-sm transition-all cursor-pointer ${activeReviewTab === 'users' ? 'bg-[#2388FF] text-white' : 'text-gray-500 hover:bg-gray-50'}`}
                                 >
                                     User
                                 </button>
                                 <button
                                     onClick={() => setActiveReviewTab('providers')}
-                                    className={`px-6 py-2 rounded-full text-sm transition-all ${activeReviewTab === 'providers' ? 'bg-[#2388FF] text-white' : 'text-gray-500 hover:bg-gray-50'}`}
+                                    className={`px-6 py-2 rounded-full text-sm transition-all cursor-pointer ${activeReviewTab === 'providers' ? 'bg-[#2388FF] text-white' : 'text-gray-500 hover:bg-gray-50'}`}
                                 >
                                     Service Provider
                                 </button>
@@ -369,13 +369,7 @@ export default function ServiceDetailsClient({ slug }) {
                                                         <div className="text-xs text-gray-500">{review.role}</div>
                                                     </div>
                                                 </div>
-                                                <div className="flex gap-1 mb-3">
-                                                    {[1, 2, 3, 4, 5].map(s => (
-                                                        <span key={s} className={`text-xs ${s <= review.rating ? 'text-yellow-400' : 'text-gray-200'}`}>★</span>
-                                                    ))}
-                                                    <span className="text-xs text-gray-400 ml-1">{review.rating}</span>
-                                                </div>
-                                                <p className="text-gray-600 text-[14px] leading-relaxed line-clamp-4">
+                                                <p className="text-gray-600 text-[14px] leading-relaxed line-clamp-4 pt-3">
                                                     {review.text}
                                                 </p>
                                             </div>
@@ -398,10 +392,10 @@ export default function ServiceDetailsClient({ slug }) {
                             <div className="w-[180px] h-[3px] bg-[#2388FF] mb-48"></div>
 
                             <div className="flex flex-col gap-4">
-                                <button className="transition-transform hover:scale-105 active:scale-95 w-fit">
+                                <button className="transition-transform hover:scale-105 active:scale-95 w-fit cursor-pointer">
                                     <img src="/img/appstore.png" alt="Download on App Store" className="h-[48px] w-auto" />
                                 </button>
-                                <button className="transition-transform hover:scale-105 active:scale-95 w-fit">
+                                <button className="transition-transform hover:scale-105 active:scale-95 w-fit cursor-pointer">
                                     <img src="/img/playstore.png" alt="Get it on Google Play" className="h-[48px] w-auto" />
                                 </button>
                             </div>
@@ -450,7 +444,7 @@ export default function ServiceDetailsClient({ slug }) {
                                         placeholder="Enter your email"
                                         className="w-full bg-white text-gray-900 rounded-full h-12 pl-6 pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     />
-                                    <button className="absolute right-1 top-1 h-10 w-10 bg-[#2388FF] rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <button className="absolute right-1 top-1 h-10 w-10 bg-[#2388FF] rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                         </svg>

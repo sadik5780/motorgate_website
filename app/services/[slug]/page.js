@@ -1,19 +1,21 @@
-import ServiceDetailsClient from "./ServiceDetailsClient";
+import ServiceDetailsClient from './ServiceDetailsClient';
 
-// REQUIRED for output: "export"
 export async function generateStaticParams() {
-  return [
-    { slug: "maintenance" },
-    { slug: "marketplace-buy-sell" },
-    { slug: "spare-parts" },
-    { slug: "towing" },
-    { slug: "auctions" },
-    { slug: "insurance" },
-    { slug: "rentals" },
-  ];
+    const servicesData = {
+        "maintenance": {},
+        "marketplace-buy-sell": {},
+        "spare-parts": {},
+        "towing": {},
+        "auctions": {},
+        "insurance": {},
+        "rentals": {}
+    };
+    return Object.keys(servicesData).map((slug) => ({
+        slug: slug,
+    }));
 }
 
-// SERVER component
-export default function ServiceDetailsPage({ params }) {
-  return <ServiceDetailsClient slug={params.slug} />;
+export default async function ServiceDetailsPage({ params }) {
+    const { slug } = await params;
+    return <ServiceDetailsClient slug={slug} />;
 }
