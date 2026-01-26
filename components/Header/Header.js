@@ -66,6 +66,7 @@ export default function Header() {
                     {/* DESKTOP NAV */}
                     <nav className="hidden lg:flex items-center gap-8 text-[14px] ">
                         <Link href="/" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname === '/' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Home</Link>
+                        <Link href="/about" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname === '/about' ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>About Us</Link>
                         <Link href="/services" onClick={() => setCurrentHash('')} className={`cursor-pointer ${pathname.startsWith('/services') && !currentHash ? 'text-[#409EFF] font-bold' : 'text-[#909399] hover:text-[#409EFF]'}`}>Services</Link>
                         <Link
                             href={pathname.startsWith('/services/') && pathname.split('/').length > 2 ? "#how-it-works" : "/services/maintenance#how-it-works"}
@@ -125,6 +126,7 @@ export default function Header() {
             `}
                         >
                             <Link href="/" className={`cursor-pointer text-sm font-medium ${pathname === '/' ? 'text-[#409EFF]' : 'text-[#909399] hover:text-[#409EFF]'}`}>Home</Link>
+                            <Link href="/about" className={`cursor-pointer text-sm font-medium ${pathname === '/about' ? 'text-[#409EFF]' : 'text-[#909399] hover:text-[#409EFF]'}`}>About Us</Link>
                             <Link href="/services" className={`cursor-pointer text-sm font-medium ${pathname.startsWith('/services') ? 'text-[#409EFF]' : 'text-[#909399] hover:text-[#409EFF]'}`}>Services</Link>
                             <span className="cursor-pointer text-sm font-medium text-[#909399] hover:text-[#409EFF]">How It Works</span>
                             <span className="cursor-pointer text-sm font-medium text-[#909399] hover:text-[#409EFF]">Reviews</span>

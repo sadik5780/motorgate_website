@@ -432,7 +432,7 @@ export default function ServiceDetailsClient({ slug }) {
                                     <img src="/img/logo-full-en.png" alt="MotorGate" className="h-12 w-auto" />
                                     <img src="/img/logounderline.png" alt="" className="w-full mt-2" />
                                 </div>
-                                <p className="text-sm">123 MotorGate Street, Dubai, UAE</p>
+                                <p className="text-sm">123 MotorGate, Riyadh, Saudi Arabia</p>
                             </div>
 
                             {/* Right: Mailing List */}
